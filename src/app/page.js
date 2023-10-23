@@ -5,14 +5,17 @@ import BlogSummaryCard from "@/components/BlogSummaryCard";
 import styles from "./homepage.module.css";
 import { getBlogPostList } from "@/helpers/file-helpers";
 
+export const metadata = {
+  title: "Bites & Bytes",
+  description: "A wonderful blog about JavaScript",
+};
+
 async function Home() {
   const blogPosts = await getBlogPostList();
 
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.mainHeading}>Latest Content:</h1>
-
-      {/* TODO: Iterate over the data read from the file system! */}
       {blogPosts && Array.isArray(blogPosts)
         ? blogPosts.map(({ slug, title, abstract, publishedOn }) => (
             <BlogSummaryCard

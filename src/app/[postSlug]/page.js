@@ -6,6 +6,18 @@ import BlogPostContent from "@/components/BlogPostContent";
 import BlogPostContentWrapper from "@/components/BlogPostContent/BlogPostContentWrapper/BlogPostContentWrapper";
 import { loadBlogPost } from "@/helpers/file-helpers";
 
+export async function generateMetadata({ params }) {
+  const postSlug = params.postSlug;
+
+  const { frontmatter } = await loadBlogPost(postSlug);
+  const { title, abstract } = frontmatter;
+
+  return {
+    title: title,
+    description: abstract,
+  };
+}
+
 async function BlogPost({ params }) {
   const postSlug = params.postSlug;
   const { frontmatter, content } = await loadBlogPost(postSlug);
