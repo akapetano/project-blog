@@ -1,5 +1,10 @@
-import DivisionGroupsDemo from "@/components/DivisionGroupsDemo";
-import CircularColorsDemo from "@/components/CircularColorsDemo";
+import { lazy } from "react";
+const DivisionGroupsDemo = lazy(() =>
+  import("@/components/DivisionGroupsDemo")
+);
+const CircularColorsDemo = lazy(() =>
+  import("@/components/CircularColorsDemo")
+);
 import CodeSnippet from "../CodeSnippet";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
