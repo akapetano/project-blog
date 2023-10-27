@@ -29,8 +29,9 @@ export function useCircularColors() {
     let intervalId = null;
     if (timerIsRunning) {
       intervalId = setInterval(() => handleTimeChange(), 10);
+
+      return () => clearInterval(intervalId);
     }
-    return () => clearInterval(intervalId);
   }, [timerIsRunning]);
 
   const timeElapsedInSeconds = Math.floor((timeElapsed % 6000) / 100);
