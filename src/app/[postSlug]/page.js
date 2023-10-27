@@ -5,6 +5,7 @@ import styles from "./postSlug.module.css";
 import BlogPostContent from "@/components/BlogPostContent";
 import BlogPostContentWrapper from "@/components/BlogPostContent/BlogPostContentWrapper/BlogPostContentWrapper";
 import { loadBlogPost } from "@/helpers/file-helpers";
+import { BLOG_TITLE } from "@/constants";
 
 export async function generateMetadata({ params }) {
   const postSlug = params.postSlug;
@@ -13,7 +14,7 @@ export async function generateMetadata({ params }) {
   const { title, abstract } = frontmatter;
 
   return {
-    title: title,
+    title: `${BLOG_TITLE} • ${title}`,
     description: abstract,
   };
 }
