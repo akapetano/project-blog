@@ -118,3 +118,5 @@ export const CIRCULAR_COLORS = [
   { label: "yellow", value: "hsl(50deg 100% 55%)" },
   { label: "blue", value: "hsl(235deg 100% 65%)" },
 ];
+
+export const COLOR_THEME_COOKIE_NAME = "color-theme";

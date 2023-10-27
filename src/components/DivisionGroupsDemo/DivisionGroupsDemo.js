@@ -76,7 +76,7 @@ function DivisionGroupsDemo({
         </div>
 
         {includeRemainderArea && (
-          <div layout className={styles.remainderArea}>
+          <div layout="true" className={styles.remainderArea}>
             <p className={styles.remainderHeading}>Remainder Area</p>
 
             {range(totalNumInGroups, numOfItems)
