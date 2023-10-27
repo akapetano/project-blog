@@ -28,7 +28,7 @@ async function BlogPost({ params }) {
     <article className={styles.wrapper}>
       <BlogHero title={title} publishedOn={publishedOn} />
       <BlogPostContentWrapper className={styles.page}>
-        <BlogPostContent source={content} postSlug={postSlug} />
+        <BlogPostContent source={content} />
       </BlogPostContentWrapper>
     </article>
   );

@@ -1,8 +1,6 @@
 import React from "react";
 import { BLOG_TITLE, BLOG_DESCRIPTION } from "@/constants";
-
 import BlogSummaryCard from "@/components/BlogSummaryCard";
-
 import styles from "./homepage.module.css";
 import { getBlogPostList } from "@/helpers/file-helpers";
 

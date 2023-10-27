@@ -1,7 +1,7 @@
 import CustomMDX from "../CustomMDX";
 
-function BlogPostContent({ source, postSlug }) {
-  return <CustomMDX source={source} postSlug={postSlug} />;
+function BlogPostContent({ source }) {
+  return <CustomMDX source={source} />;
 }
 
 export default BlogPostContent;
