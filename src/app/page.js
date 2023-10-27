@@ -1,4 +1,5 @@
 import React from "react";
+import { BLOG_TITLE, BLOG_DESCRIPTION } from "@/constants";
 
 import BlogSummaryCard from "@/components/BlogSummaryCard";
 
@@ -6,8 +7,8 @@ import styles from "./homepage.module.css";
 import { getBlogPostList } from "@/helpers/file-helpers";
 
 export const metadata = {
-  title: "Bites & Bytes",
-  description: "A wonderful blog about JavaScript",
+  title: BLOG_TITLE,
+  description: BLOG_DESCRIPTION,
 };
 
 async function Home() {
